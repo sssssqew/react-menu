@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/index.js --bundle --minify --outfile=build/bundle.js --loader:.js=jsx --format=cjs --loader:.png=file --loader:.jpg=file --loader:.svg=file & esbuild public/index.html --outfile=build/index.html --loader:.html=copy",
+    "build": "esbuild src/index.js --bundle --minify --outfile=build/static/js/bundle.js --loader:.js=jsx --format=cjs --loader:.png=file --loader:.jpg=file --loader:.svg=file & esbuild public/index.html --outfile=build/index.html --loader:.html=copy",
     "start": "esbuild public/index.html --outfile=build/index.html --loader:.html=copy & esbuild src/index.js --bundle --minify --outfile=build/bundle.js --loader:.js=jsx --format=cjs --loader:.png=file --loader:.jpg=file --loader:.svg=file --watch --servedir=build"
   },
   "keywords": [],
