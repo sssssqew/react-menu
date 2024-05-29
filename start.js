@@ -25,7 +25,8 @@ esbuild
         format: 'cjs',
         define: {
             'process.env.REACT_APP_BASE_URL': '"https://vercel-express-deploy-tutorial.vercel.app"'
-        }
+        },
+        sourcemap: true
     })
     .then(async (ctx) => {
         console.log('⚡Bundle build complete ⚡')
