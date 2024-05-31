@@ -1,3 +1,43 @@
 .App{
     text-align: center;
 }
+ul{
+    margin: 0; padding: 0;
+    list-style: none;
+}
+.App > nav {
+    padding: 1rem 0;
+}
+.App > nav > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.App > nav > ul > li{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.App > nav > ul > li:hover{
+    color: lightskyblue;
+}
+
+
+/* 메뉴 */
+.menu-container{
+    all: initial;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: .5rem 0rem;
+    display: none;
+    position: absolute;
+}
+.menu-container.on{
+    display: block;
+}
+/* 아이템 */
+.menuItem-container{
+    cursor: pointer;
+}
+.menuItem-container:hover{
+    background-color: #eee;
+}
