@@ -7,7 +7,7 @@ esbuild
         outfile: 'build/index.html',
         loader: { '.html': 'copy' }
     })
-    .then(() => console.log('⚡Bundle build complete ⚡'))
+    .then(() => console.log('⚡ Bundle build complete ⚡'))
     .catch(e => {
         console.log('❌Failed to bundle ❌')
         console.log(e)
@@ -24,12 +24,12 @@ esbuild
         loader: { '.js': 'jsx',  '.png': 'file', '.jpg': 'file', '.svg': 'file'},
         format: 'cjs',
         define: {
-            'process.env.REACT_APP_BASE_URL': '"https://vercel-express-deploy-tutorial.vercel.app"'
+            'process.env.REACT_APP_BASE_URL': '"set-your-environment-variable"'
         },
         sourcemap: true
     })
     .then(async (ctx) => {
-        console.log('⚡Bundle build complete ⚡')
+        console.log('⚡ Bundle build complete ⚡')
         await ctx.watch().then(() => console.log('watching...'))
         await ctx.serve({ servedir: 'build' }).then(() => console.log('serve at http://127.0.0.1:8000/'))
     })

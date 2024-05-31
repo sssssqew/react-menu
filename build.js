@@ -7,7 +7,7 @@ esbuild
         outfile: 'build/index.html',
         loader: { '.html': 'copy' }
     })
-    .then(() => console.log('⚡Bundle build complete ⚡'))
+    .then(() => console.log('⚡ Bundle build complete ⚡'))
     .catch(e => {
         console.log('❌Failed to bundle ❌')
         console.log(e)
@@ -24,10 +24,10 @@ esbuild
         loader: { '.js': 'jsx',  '.png': 'file', '.jpg': 'file', '.svg': 'file'},
         format: 'cjs',
         define: {
-            'process.env.REACT_APP_BASE_URL': '"https://vercel-express-deploy-tutorial.vercel.app"'
+            'process.env.REACT_APP_BASE_URL': '"set-your-environment-variable"'
         }
     })
-    .then(() => console.log('⚡Bundle build complete ⚡'))
+    .then(() => console.log('⚡ Bundle build complete ⚡'))
     .catch(e => {
         console.log('❌Failed to bundle ❌')
         console.log(e)
